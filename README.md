@@ -23,10 +23,10 @@ pip3 install pillow
 
 ## System Comparison: Tensorflow vs PyTorch
 
-Tensorflow:
+### Tensorflow:
 
 Tensorflow is the most popular library used for deep learning. It was developed by Google and can be used to develop neural networks for image recognition, which is what it was used for in this project. Tensorflow comes with plenty of documentation and tutorials, which ease the learning curve for beginners. Within Tensorflow, we use Keras, a high-level API for building neural networks. In comparing the process of developing deep learning models in Tensorflow with and without Keras, I found that Keras greatly simplifies computation required for neural nets. Instead of writing code for each multiplication and addition that needs to take place, Keras allows you to create an entire model, define optimizers, and start the learning process in just a few lines of code. Keras additionally simplified the process for testing the network with the testing dataset by reducing it to a single command.
 
-Pytorch:
+### Pytorch:
 
 The other deep learning framework used was PyTorch, which is newer than Tensorflow but rising quickly in popularity. Like Tensorflow, Pytorch abstract the neural network by reducing it to just a few lines of code. There is less community support and tutorial for Pytorch, making it more difficult to get started. However, after a few hours of studying the framework, I found it relatively easy to build the model. Pytorch comes with a lot of support for using pre-trained models and existing datasets, but it is lacking in its documentation for custom datasets. The Pytorch dataloader simplified the building of the model, but introduced minor complexities into getting the dataset working. Pytorch also required that image data be converted into tensors, which helps in widening Pytorch's support to GPUs.
