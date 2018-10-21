@@ -1,6 +1,6 @@
 # EC601 Mini-Project 2: Deep Learning
 
-This purpose of this deep learning project was to explore different machine learning frameworks and develop a model for image recognition. The two frameworks used were Tensorflow and Pytorch, and a comparison of these two systems is provided at the end of this README. I used these frameworks to develop a model for image recognition between roses vs daisies. 
+This purpose of this deep learning project was to explore different machine learning frameworks and develop a model for performing image recognition between two objects (I chose roses vs daisies). The two frameworks used were Tensorflow and Pytorch, and a comparison of these two systems is provided at the end of this README. 
 
 ## Image Collection
 To collect images for the dataset and tag them, I downloaded photos from Google Images using an open-source project: google-image-download. I used this repository to write image_download.py. This program simple to understand and use. One just has to input keywords to search and the number of photos to download, and the script will download that number of photos from google images based off the keywords provided. The photos are then separated by being downloaded into their own directories, making it easy to later access.
