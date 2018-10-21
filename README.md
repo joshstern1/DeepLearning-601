@@ -1,13 +1,15 @@
 # EC601 Mini-Project 2: Deep Learning
 
-This purpose of this deep learning project was to explore different machine learning frameworks and develop a model for image recognition. The two frameworks used were Tensorflow and Pytorch, and a comparison of these two systems is provided at the end of this README.
+This purpose of this deep learning project was to explore different machine learning frameworks and develop a model for image recognition. The two frameworks used were Tensorflow and Pytorch, and a comparison of these two systems is provided at the end of this README. I used these frameworks to develop a model for image recognition between roses vs daisies. 
 
-I used these frameworks to develop a model for image recognition between roses vs daisies. To collect images for the dataset and tag them, I downloaded photos from Google Images using an open-source project: google-image-download. I used this repository to write image_download.py. This program simple to understand and use. One just has to input keywords to search and the number of photos to download, and the script will download that number of photos from google images based off the keywords provided. The photos are then separated by being downloaded into their own directories, making it easy to later access.
+## Image Collection
+To collect images for the dataset and tag them, I downloaded photos from Google Images using an open-source project: google-image-download. I used this repository to write image_download.py. This program simple to understand and use. One just has to input keywords to search and the number of photos to download, and the script will download that number of photos from google images based off the keywords provided. The photos are then separated by being downloaded into their own directories, making it easy to later access.
 
 To use image-download.py, just input into the 'keywords' field that objects that you want your model to be able to recognize. The input into the 'limit' field the total number of images that you want to download. You will also need to run the following command to install google-images-download from its repository:
 
 pip install google_images_download
 
+## Running Tensorflow and Pytorch Programs
 
 In both my Tensorflow and Pytorch scripts, I build my custom dataset by reading in all the downloaded images into an array. It is easy to label these photos, because I know what the image is of based off the directory that it is found in. The only change that needs to be made to the script is the directory containing the photos downloaded by image-download.py. In both programs, the variable 'DATADIR' holds this directory and must be changed to whatever directory on your computer is holding the images.
 
