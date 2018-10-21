@@ -1,4 +1,4 @@
-#**EC601 Mini-Project 2: Deep Learning
+**EC601 Mini-Project 2: Deep Learning
 
 This purpose of this deep learning project was to explore different machine learning frameworks and develop a model for image recognition. The two frameworks used were Tensorflow and Pytorch, and a comparison of these two systems is provided at the end of this README.
 
