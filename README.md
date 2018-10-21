@@ -21,7 +21,7 @@ pip3 install torchvision
 pip3 install pillow
 
 
-System Comparison: Tensorflow vs PyTorch
+## System Comparison: Tensorflow vs PyTorch
 
 Tensorflow:
 
