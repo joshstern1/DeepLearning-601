@@ -19,6 +19,7 @@ pip install tensorflow
 pip install opencv-python
 
 To run pytorch_model.py, first perform the proper installations by running the following commands:
+
 pip3 install torchvision
 pip3 install pillow
 
