@@ -19,7 +19,9 @@ For my Tensorflow program, I used a Tensorflow keras tutorial on basic classific
 
 https://www.tensorflow.org/tutorials/keras/basic_classification
 
-In both my Tensorflow and Pytorch scripts, I built my custom dataset by reading in all the downloaded images into an array. It is easy to label these photos, because I know what the image is of based off the directory that it is found in. The only change that needs to be made to the script is the directory containing the photos downloaded by image-download.py. In both programs, the variable 'image_directory' holds this directory and must be changed to whatever directory on your computer is holding the images. The variable 'NUM_IMAGES' should be changed to the dataset size for each category, and the 'CATEGORIES' array should be altered so that it contains the names of the sub-directories containing the downloaded images. To run tensorflow_model.py, first perform the proper installations by running the following commands:
+In both my Tensorflow and Pytorch scripts, I built my custom dataset by reading in all the downloaded images into an array. It is easy to label these photos, because I know what the image is of based off the directory that it is found in. The only changes that needs to be made to the script is in the variables 'image_directory', 'NUM_IMAGES', and 'CATEGORIES'. In both programs, the variable 'image_directory' holds the directory holding the downloaded images and must be changed to whatever directory on your computer is holding the images. The variable 'NUM_IMAGES' should be changed to the dataset size for each category, and the 'CATEGORIES' array should be altered so that it contains the names of the sub-directories containing the downloaded images. 
+
+To run tensorflow_model.py, first perform the proper installations by running the following commands:
 
 pip install tensorflow
 pip install opencv-python
