@@ -2,7 +2,7 @@
 
 This purpose of this deep learning project was to explore different machine learning frameworks and develop a model for performing image recognition between two objects (I chose roses vs daisies). The two frameworks used were Tensorflow and Pytorch, and a comparison of these two systems is provided at the end of this README.
 
-![Rose]https://github.com/joshstern1/DeepLearning-601/blob/master/96.%20single-rose.jpg
+![Rose](https://github.com/joshstern1/DeepLearning-601/blob/master/96.%20single-rose.jpg)
 
 
 
