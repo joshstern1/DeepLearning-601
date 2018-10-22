@@ -52,7 +52,7 @@ class CustomTrainingDataset(Dataset):
                     else:
                         testing_data.append([new_array, classnum])
                 except Exception as e:
-                    pass
+                    print(img, "is an invalid image and will be ignored")
 
         random.shuffle(training_data)
         random.shuffle(validation_data)
@@ -128,7 +128,7 @@ class CustomTestingDataset(Dataset):
                     else:
                         testing_data.append([new_array, classnum])
                 except Exception as e:
-                    pass
+                    print(img, "is an invalid image and will be ignored")
 
         random.shuffle(training_data)
         random.shuffle(validation_data)
@@ -202,6 +202,7 @@ class NeuralNet(nn.Module):
 
 model = NeuralNet(input_size, hidden_size, num_classes).to(device)
 
+
 #specify how to train the model (what optimizer, loss type)
 criterion = nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
@@ -210,28 +211,34 @@ optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 total_step = len(train_loader)
 for epoch in range(num_epochs):
     for i, (images, labels) in enumerate(train_loader):
-        # reshape images to the same size
-        images = images.reshape(-1, 256*256).to(device)
-        labels = labels.to(device)
+        try:
+            # reshape images to the same size
+            images = images.reshape(-1, 256*256).to(device)
+            labels = labels.to(device)
 
-        # pass the data through the model
-        outputs = model(images)
-        loss = criterion(outputs, labels)
+            # pass the data through the model
+            outputs = model(images)
+            loss = criterion(outputs, labels)
 
-        optimizer.zero_grad()
-        loss.backward()
-        optimizer.step()
+            optimizer.zero_grad()
+            loss.backward()
+            optimizer.step()
+        except:
+            print("Error in training set, check that dataset is made of valid images and pytorch libraries are imported")
 
 #compare how the model performs on the test data
 with torch.no_grad():
     correct = 0
     total = 0
     for images, labels in test_loader:
-        images = images.reshape(-1, 256*256).to(device)
-        labels = labels.to(device)
-        outputs = model(images)
-        _, predicted = torch.max(outputs.data, 1)
-        total += labels.size(0)
-        correct += (predicted == labels).sum().item()
+        try:
+            images = images.reshape(-1, 256*256).to(device)
+            labels = labels.to(device)
+            outputs = model(images)
+            _, predicted = torch.max(outputs.data, 1)
+            total += labels.size(0)
+            correct += (predicted == labels).sum().item()
+        except:
+            print("Error in testing set, check that dataset is made of valid images and pytorch libraries are imported")
 
     print('Test accuracy: {} %'.format(100 * correct / total))

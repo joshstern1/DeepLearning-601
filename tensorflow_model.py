@@ -25,32 +25,29 @@ validation_data = []
 testing_data = []
 
 #read in images from directory into an array
-try:
-    for category in CATEGORIES:
-        counter = -1
-        path = os.path.join(image_directory, category)
-        classnum = 1
-        if category == CATEGORIES[0]:
-            classnum =  0
-        for img in os.listdir(path):
-            counter = counter + 1
-            try:
-                #use opencv to open and format images
-                img_array = cv2.imread(os.path.join(path, img), cv2.IMREAD_GRAYSCALE)
-                new_array = cv2.resize(img_array, (IMG_SIZE, IMG_SIZE))
-                if counter<TRAINING_SIZE:
-                    #build training data array
-                    training_data.append([new_array, classnum])
-                elif counter<(TRAINING_SIZE+VALIDATION_SIZE):
-                    #build validation data array
-                    validation_data.append([new_array, classnum])
-                else:
-                    #build testing data array
-                    testing_data.append([new_array, classnum])
-            except Exception as e:
-                pass
-except:
-    print("Error accessing the directory of images")
+for category in CATEGORIES:
+    counter = -1
+    path = os.path.join(image_directory, category)
+    classnum = 1
+    if category == CATEGORIES[0]:
+        classnum =  0
+    for img in os.listdir(path):
+        counter = counter + 1
+        try:
+            #use opencv to open and format images
+            img_array = cv2.imread(os.path.join(path, img), cv2.IMREAD_GRAYSCALE)
+            new_array = cv2.resize(img_array, (IMG_SIZE, IMG_SIZE))
+            if counter<TRAINING_SIZE:
+                #build training data array
+                training_data.append([new_array, classnum])
+            elif counter<(TRAINING_SIZE+VALIDATION_SIZE):
+                #build validation data array
+                validation_data.append([new_array, classnum])
+            else:
+                #build testing data array
+                testing_data.append([new_array, classnum])
+        except Exception as e:
+            print(img, "is an invalid image and will be ignored")
 
 #shuffle the data so that the daisies are mixed in with the roses
 random.shuffle(training_data)
