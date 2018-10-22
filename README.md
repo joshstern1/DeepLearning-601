@@ -7,7 +7,7 @@ To collect images for the dataset and tag them, I downloaded photos from Google 
 
 To use dataset_download.py, just input into the 'keywords' field that objects that you want your model to be able to recognize. The input into the 'limit' field the total number of images that you want to download. 
 
-https://github.com/joshstern1/DeepLearning-601/dataset_download.py#L9
+https://github.com/joshstern1/DeepLearning-601/blob/71966f5213086d4b99be53f9145d5309d6f7035a/dataset_download.py#L9
 
 You will also need to run the following command to install google-images-download from its repository:
 
