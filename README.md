@@ -2,8 +2,8 @@
 
 This purpose of this deep learning project was to explore different machine learning frameworks and develop a model for performing image recognition between two objects (I chose roses vs daisies). The two frameworks used were Tensorflow and Pytorch, and a comparison of these two systems is provided at the end of this README.
 
-<img align="center" width="200" height="200" src="https://github.com/joshstern1/DeepLearning-601/blob/master/96.%20single-rose.jpg">
-<img align="center" width="200" height="200" src="https://github.com/joshstern1/DeepLearning-601/blob/master/89.%20daisy-712892__340.jpg">
+<img align="left" width="300" height="300" src="https://github.com/joshstern1/DeepLearning-601/blob/master/96.%20single-rose.jpg">
+<img align="right" width="300" height="300" src="https://github.com/joshstern1/DeepLearning-601/blob/master/89.%20daisy-712892__340.jpg">
 
 ## Image Collection
 To collect images for the dataset and tag them, I downloaded photos from Google Images using an open-source project: google-image-download. I used this repository to write dataset_download.py. This program is simple to use and understand. You just has to input keywords to search and the number of photos to download, and the script will download that number of photos from google images based off the keywords provided. The photos are then separated (tagged) by being downloaded into their own directories, making it easy to later access.
