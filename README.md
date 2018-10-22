@@ -13,7 +13,7 @@ You will also need to run the following command to install google-images-downloa
 
 pip install google_images_download
 
-## Running Tensorflow Programs
+## Running Tensorflow Program
 
 For my Tensorflow program, I used a Tensorflow keras tutorial on basic classification that can be found here:
 
@@ -28,7 +28,7 @@ To run tensorflow_model.py, first perform the proper installations by running th
 pip install tensorflow
 pip install opencv-python
 
-## Running Pytorch Programs
+## Running Pytorch Program
 
 For the deep learning model for my Pytorch program, I used a Pytorch tutorial that can be found here:
 
