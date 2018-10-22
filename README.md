@@ -5,7 +5,11 @@ This purpose of this deep learning project was to explore different machine lear
 ## Image Collection
 To collect images for the dataset and tag them, I downloaded photos from Google Images using an open-source project: google-image-download. I used this repository to write dataset_download.py. This program is simple to use and understand. You just has to input keywords to search and the number of photos to download, and the script will download that number of photos from google images based off the keywords provided. The photos are then separated (tagged) by being downloaded into their own directories, making it easy to later access.
 
-To use dataset_download.py, just input into the 'keywords' field that objects that you want your model to be able to recognize. The input into the 'limit' field the total number of images that you want to download. You will also need to run the following command to install google-images-download from its repository:
+To use dataset_download.py, just input into the 'keywords' field that objects that you want your model to be able to recognize. The input into the 'limit' field the total number of images that you want to download. 
+
+arguments = {"keywords":"rose,daisy","limit":100,"print_urls":True}
+
+You will also need to run the following command to install google-images-download from its repository:
 
 pip install google_images_download
 
