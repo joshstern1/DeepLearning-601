@@ -34,7 +34,11 @@ For the deep learning model for my Pytorch program, I used a Pytorch tutorial th
 
 https://github.com/yunjey/pytorch-tutorial
 
-Again in this program, I defined three variables, 'image directory', 'NUM_IMAGES', and 'CATEGORIES'. These 3 variables can be changed depending on the type of images you are comparing and which directory they can be found in. To run pytorch_model.py, first perform the proper installations by running the following commands:
+Again in this program, I defined three variables, 'image directory', 'NUM_IMAGES', and 'CATEGORIES'. These 3 variables can be changed depending on the type of images you are comparing and which directory they can be found in. 
+
+https://github.com/joshstern1/DeepLearning-601/blob/b7944abc7cb51902b3e0ca176131adc75aa29a41/pytorch_model.py#L16-L18
+
+To run pytorch_model.py, first perform the proper installations by running the following commands:
 
 pip3 install torchvision
 pip3 install pillow
